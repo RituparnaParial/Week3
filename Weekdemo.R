@@ -44,3 +44,12 @@ managers$AgeCAt[is.na(managers$Age)] <- "Elderly"
 managers
 
 # Create a new column called summary col
+# That contains a summary of each row
+
+summary_col <- managers$q1 + managers$q2 +
+              managers$q3 + managers$q4 + managers$q5
+summary_col
+
+managers <- data.frame(managers, summary_col)
+managers
+
